@@ -1,1 +1,1 @@
-"""PLACE FOR DOCSTRING."""
+"""Scripts package."""

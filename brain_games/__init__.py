@@ -1,1 +1,1 @@
-"""PLACE FOR DOCSTRING."""
+"""Brain Games project."""
