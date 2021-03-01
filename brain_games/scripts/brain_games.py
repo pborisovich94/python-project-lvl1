@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-"""PLACE FOR DOCSTRING."""
+"""Welcome user script."""
 from brain_games.cli import welcome_user
 
 
 def main():
-    """PLACE FOR DOCSTRING."""
+    """Welcomes user."""
     print('Welcome to the Brain Games!')
     welcome_user()
 
