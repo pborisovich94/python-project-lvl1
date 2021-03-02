@@ -1,6 +1,7 @@
 """Even game script."""
-import prompt
 import random
+import prompt
+
 
 INSTRUCTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 PROMPT_FOR_QUESTION = 'Question: '
@@ -25,14 +26,22 @@ def is_even(number):
 
 
 def welcome_user():
-    """Ask users name and welcomes him/her."""
+    """Ask users name and welcomes him/her.
+
+    Returns:
+        user_name
+    """
     user_name = prompt.string('May I have your name? ')
     print('Hello, {name}!'.format(name=user_name))
     return user_name
 
 
 def play_even(user_name):
-    """Generate questions and correct_answers."""
+    """Generate questions and correct_answers.
+
+    Args:
+        user_name: playing player name
+    """
     print(INSTRUCTION)
     wins = 0
 
