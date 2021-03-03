@@ -25,3 +25,14 @@ To play this game run: \
 #### Defeat example:
 
 [![asciicast](https://asciinema.org/a/Ev0QS9fYu5GVuMYipfJ62WEk2.svg)](https://asciinema.org/a/Ev0QS9fYu5GVuMYipfJ62WEk2)
+
+## Game: 'Calculator'
+
+A random mathematical expression is presented to player to calculate it.
+
+To play this game run: \
+`brain-calc`
+
+#### Victory expample:
+
+#### Defeat example:
