@@ -36,3 +36,16 @@ To play this game run: \
 #### Victory expample:
 
 #### Defeat example:
+
+
+## Game: 'Greatest common divisor (GCD)'
+
+Two random numbers is shown to player.
+Player must calculate and enter the greatest common divisor of these numbers.
+
+To play this game run: \
+`brain-gcd`
+
+#### Victory expample:
+
+#### Defeat example:
