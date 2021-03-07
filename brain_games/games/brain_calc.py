@@ -1,4 +1,5 @@
 """Game: Calculator."""
+import operator as operator_module
 import random
 
 GAME_RULES = 'What is the result of the expression?'
@@ -10,6 +11,25 @@ MIN, MAX = 1, 100
 ADDITION, SUBTRACTION, MULTIPLICATION = '+', '-', '*'
 
 
+def _calculate(operand1, operator, operand2):
+    """Calculate passed expression.
+
+    Args:
+        operand1: first number
+        operator: "+" or "-" or "*"
+        operand2: second number
+
+    Returns:
+        str
+    """
+    if operator == ADDITION:
+        return str(operator_module.add(operand1, operand2))
+    elif operator == SUBTRACTION:
+        return str(operator_module.sub(operand1, operand2))
+    elif operator == MULTIPLICATION:
+        return str(operator_module.mul(operand1, operand2))
+
+
 def get_question_and_correct_answer():
     """Generate question and correct_answers.
 
@@ -17,10 +37,14 @@ def get_question_and_correct_answer():
         str,
         str
     """
-    question = '{operand_1} {operator} {operand_2}'.format(
-        operand_1=str(random.randint(MIN, MAX)),
-        operator=random.choice([ADDITION, SUBTRACTION, MULTIPLICATION]),
-        operand_2=str(random.randint(MIN, MAX)),
+    operand1 = random.randint(MIN, MAX)
+    operator = random.choice([ADDITION, SUBTRACTION, MULTIPLICATION])
+    operand2 = random.randint(MIN, MAX)
+
+    question = '{operand1} {operator} {operand2}'.format(
+        operand1=operand1,
+        operator=operator,
+        operand2=operand2,
     )
-    correct_answer = str(eval(question))
+    correct_answer = _calculate(operand1, operator, operand2)
     return question, correct_answer
