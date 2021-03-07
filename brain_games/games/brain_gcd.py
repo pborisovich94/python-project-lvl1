@@ -7,7 +7,7 @@ GAME_RULES = 'Find the greatest common divisor of given numbers.'
 MIN, MAX = 1, 100
 
 
-def find_gcd(number1, number2):
+def _find_gcd(number1, number2):
     """Find the greatest common divisor of given numbers.
 
     Args:
@@ -39,5 +39,5 @@ def get_question_and_correct_answer():
         number_1=str(number1),
         number_2=str(number2),
     )
-    correct_answer = str(find_gcd(number1=number1, number2=number2))
+    correct_answer = str(_find_gcd(number1=number1, number2=number2))
     return question, correct_answer

@@ -7,12 +7,10 @@ GAME_RULES = 'What number is missing in the progression?'
 LENGTH = 10
 
 # First number of progression
-FIRST_MIN = 1
-FIRST_MAX = 20
+FIRST_MIN, FIRST_MAX = 1, 20
 
 # Progression step
-STEP_MIN = 3
-STEP_MAX = 50
+STEP_MIN, STEP_MAX = 3, 50
 
 
 def get_question_and_correct_answer():

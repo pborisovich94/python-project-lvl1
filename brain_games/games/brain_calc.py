@@ -7,9 +7,7 @@ GAME_RULES = 'What is the result of the expression?'
 MIN, MAX = 1, 100
 
 # Operators
-ADDITION = '+'
-SUBTRACTION = '-'
-MULTIPLICATION = '*'
+ADDITION, SUBTRACTION, MULTIPLICATION = '+', '-', '*'
 
 
 def get_question_and_correct_answer():

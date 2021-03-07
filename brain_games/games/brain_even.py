@@ -7,7 +7,7 @@ GAME_RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
 MIN, MAX = 1, 100
 
 
-def is_even(number):
+def _is_even(number):
     """Return True if number is even else False.
 
     Args:
@@ -27,5 +27,5 @@ def get_question_and_correct_answer():
         str
     """
     question = str(random.randint(MIN, MAX))
-    correct_answer = 'yes' if is_even(int(question)) else 'no'
+    correct_answer = 'yes' if _is_even(int(question)) else 'no'
     return question, correct_answer
