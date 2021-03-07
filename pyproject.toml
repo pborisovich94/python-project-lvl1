@@ -7,7 +7,7 @@ packages = [
   { include = "brain_games" },
 ]
 classifiers = [
-  "Topic :: Games",
+  "Topic :: Games/Entertainment",
 ]
 repository = "https://github.com/pborisovich94/python-project-lvl1"
 
