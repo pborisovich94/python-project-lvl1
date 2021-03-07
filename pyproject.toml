@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "prokhor-pastushenko_brain_games"
+name = "pborisovich_brain_games"
 version = "0.1.0"
 description = ""
 authors = ["Prokhor Pastushenko <p.pastushenko@calltravel.eu>"]
