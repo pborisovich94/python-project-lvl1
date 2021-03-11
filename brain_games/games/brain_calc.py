@@ -21,6 +21,9 @@ def _calculate(operand1, operator, operand2):
 
     Returns:
         str
+
+    Raises:
+        ValueError: unknown incoming operator
     """
     if operator == ADDITION:
         return str(operator_module.add(operand1, operand2))
@@ -28,10 +31,9 @@ def _calculate(operand1, operator, operand2):
         return str(operator_module.sub(operand1, operand2))
     elif operator == MULTIPLICATION:
         return str(operator_module.mul(operand1, operand2))
-    else:
-        raise ValueError('Unknown operator: {operator}'.format(
-            operator=operator,
-        ))
+    raise ValueError('Unknown operator: {operator}'.format(
+        operator=operator,
+    ))
 
 
 def get_question_and_correct_answer():
