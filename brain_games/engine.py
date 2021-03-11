@@ -29,10 +29,8 @@ def play(game):
     Args:
         game: certain game
     """
-    # СНАЧАЛА ПРИВЕТСТВУЕМ ИГРОКА
     print_to_user(constants.INTRODUCTION)
 
-    # Далее спрашиваем имя игрока и приветствуем его
     user_name = prompt.string(
         '{text} '.format(text=constants.PROMPT_FOR_NAME),
     )
@@ -40,10 +38,8 @@ def play(game):
         text=constants.GREETING, user_name=user_name,
     ))
 
-    # Далее выводим правила игры
     print_to_user('{rules}'.format(rules=game.GAME_RULES))
 
-    # Далее идёт цикл на верный/неверный ответ
     for _ in range(0, constants.LOOPS_FOR_WIN):
         (question, correct_answer) = game.get_question_and_correct_answer()
         print_to_user('{question}: {number}'.format(
