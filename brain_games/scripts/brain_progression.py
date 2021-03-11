@@ -1,7 +1,7 @@
 """Progression game script."""
 
-from brain_games.games import brain_progression
 from brain_games.engine import play
+from brain_games.games import brain_progression
 
 
 def main():
