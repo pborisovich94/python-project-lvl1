@@ -28,6 +28,10 @@ def _calculate(operand1, operator, operand2):
         return str(operator_module.sub(operand1, operand2))
     elif operator == MULTIPLICATION:
         return str(operator_module.mul(operand1, operand2))
+    else:
+        raise ValueError('Unknown operator: {operator}'.format(
+            operator=operator,
+        ))
 
 
 def get_question_and_correct_answer():
