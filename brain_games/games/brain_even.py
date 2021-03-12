@@ -1,7 +1,7 @@
 """Game: Is number even or not."""
 import random
 
-GAME_RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
+GAME_RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 # Range of random number
 MIN, MAX = 1, 100

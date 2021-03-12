@@ -2,7 +2,7 @@
 import operator as operator_module
 import random
 
-GAME_RULES = 'What is the result of the expression?'
+GAME_RULE = 'What is the result of the expression?'
 
 # Range of random number
 MIN, MAX = 1, 100

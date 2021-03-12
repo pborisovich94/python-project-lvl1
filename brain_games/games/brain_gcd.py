@@ -1,7 +1,7 @@
 """Game: GCD."""
 import random
 
-GAME_RULES = 'Find the greatest common divisor of given numbers.'
+GAME_RULE = 'Find the greatest common divisor of given numbers.'
 
 # Range of random number
 MIN, MAX = 1, 100

@@ -1,7 +1,7 @@
 """Is it a prime number?."""
 import random
 
-GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+GAME_RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 # Range of random number
 MIN, MAX = 1, 100

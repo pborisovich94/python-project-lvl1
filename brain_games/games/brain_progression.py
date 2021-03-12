@@ -1,7 +1,7 @@
 """Game: Progression."""
 import random
 
-GAME_RULES = 'What number is missing in the progression?'
+GAME_RULE = 'What number is missing in the progression?'
 
 # Progression length
 LENGTH = 10
