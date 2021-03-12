@@ -11,37 +11,15 @@ MIN, MAX = 1, 100
 ADDITION, SUBTRACTION, MULTIPLICATION = '+', '-', '*'
 
 
-def _calculate(operand1, operator, operand2):
-    """Calculate passed expression.
-
-    Args:
-        operand1: first number
-        operator: "+" or "-" or "*"
-        operand2: second number
-
-    Returns:
-        str
-
-    Raises:
-        ValueError: unknown incoming operator
-    """
-    if operator == ADDITION:
-        return str(operator_module.add(operand1, operand2))
-    elif operator == SUBTRACTION:
-        return str(operator_module.sub(operand1, operand2))
-    elif operator == MULTIPLICATION:
-        return str(operator_module.mul(operand1, operand2))
-    raise ValueError('Unknown operator: {operator}'.format(
-        operator=operator,
-    ))
-
-
 def get_question_and_correct_answer():
     """Generate question and correct_answers.
 
     Returns:
         str,
         str
+
+    Raises:
+        ValueError: unknown incoming operator
     """
     operand1 = random.randint(MIN, MAX)
     operator = random.choice([ADDITION, SUBTRACTION, MULTIPLICATION])
@@ -52,5 +30,16 @@ def get_question_and_correct_answer():
         operator=operator,
         operand2=operand2,
     )
-    correct_answer = _calculate(operand1, operator, operand2)
+
+    if operator == ADDITION:
+        correct_answer = str(operator_module.add(operand1, operand2))
+    elif operator == SUBTRACTION:
+        correct_answer = str(operator_module.sub(operand1, operand2))
+    elif operator == MULTIPLICATION:
+        correct_answer = str(operator_module.mul(operand1, operand2))
+    else:
+        raise ValueError('Unknown operator: {operator}'.format(
+            operator=operator,
+        ))
+
     return question, correct_answer
