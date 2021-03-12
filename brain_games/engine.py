@@ -14,43 +14,32 @@ def ask_user():
     )
 
 
-def print_to_user(text):
-    """Print information to user.
-
-    Args:
-        text: information to be printed out to user
-    """
-    print(text)
-
-
 def play(game):
     """Plays the game.
 
     Args:
         game: certain game
     """
-    print_to_user(constants.INTRODUCTION)
+    print(constants.INTRODUCTION)
 
     user_name = prompt.string(
         '{text} '.format(text=constants.PROMPT_FOR_NAME),
     )
-    print_to_user('{text}, {user_name}!'.format(
+    print('{text}, {user_name}!'.format(
         text=constants.GREETING, user_name=user_name,
     ))
 
-    print_to_user('{rules}'.format(rules=game.GAME_RULES))
+    print('{rules}'.format(rules=game.GAME_RULES))
 
     for _ in range(0, constants.LOOPS_FOR_WIN):
         (question, correct_answer) = game.get_question_and_correct_answer()
-        print_to_user('{question}: {number}'.format(
+        print('{question}: {number}'.format(
             question=constants.PROMPT_FOR_QUESTION,
             number=question,
         ))
         user_answer = ask_user()
-        if user_answer == correct_answer:
-            print_to_user('{text}'.format(text=constants.CASE_CORRECT))
-        else:
-            print_to_user(
+        if user_answer != correct_answer:
+            print(
                 "'{user_answer}' {text}. ".format(
                     user_answer=user_answer,
                     text=constants.CASE_INCORRECT_WRONG,
@@ -65,8 +54,9 @@ def play(game):
                 ),
             )
             break
-    else:
-        print_to_user('{text}, {user_name}!'.format(
-            text=constants.CONGRATULATION,
-            user_name=user_name,
-        ))
+        print('{text}'.format(text=constants.CASE_CORRECT))
+
+    print('{text}, {user_name}!'.format(
+        text=constants.CONGRATULATION,
+        user_name=user_name,
+    ))
