@@ -3,9 +3,6 @@ import random
 
 GAME_RULE = 'Find the greatest common divisor of given numbers.'
 
-# Range of random number
-MIN, MAX = 1, 100
-
 
 def _find_gcd(number1, number2):
     """Find the greatest common divisor of given numbers.
@@ -33,8 +30,8 @@ def get_question_and_correct_answer():
         str,
         str
     """
-    number1 = random.randint(MIN, MAX)
-    number2 = random.randint(MIN, MAX)
+    number1 = random.randint(1, 100)
+    number2 = random.randint(1, 100)
     question = '{number_1} {number_2}'.format(
         number_1=str(number1),
         number_2=str(number2),

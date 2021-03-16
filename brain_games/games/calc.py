@@ -4,9 +4,6 @@ import random
 
 GAME_RULE = 'What is the result of the expression?'
 
-# Range of random number
-MIN, MAX = 1, 100
-
 # Operators
 ADDITION, SUBTRACTION, MULTIPLICATION = '+', '-', '*'
 
@@ -21,25 +18,17 @@ def get_question_and_correct_answer():
     Raises:
         ValueError: unknown incoming operator
     """
-    operand1 = random.randint(MIN, MAX)
-    operator = random.choice([ADDITION, SUBTRACTION, MULTIPLICATION])
-    operand2 = random.randint(MIN, MAX)
+    operand1 = random.randint(1, 100)
+    operand2 = random.randint(1, 100)
+    operators = {
+        '+': operator_module.add,
+        '-': operator_module.sub,
+        '*': operator_module.mul,
+    }
 
-    question = '{operand1} {operator} {operand2}'.format(
-        operand1=operand1,
-        operator=operator,
-        operand2=operand2,
-    )
+    operator = random.choice(list(operators.keys()))
 
-    if operator == ADDITION:
-        correct_answer = str(operator_module.add(operand1, operand2))
-    elif operator == SUBTRACTION:
-        correct_answer = str(operator_module.sub(operand1, operand2))
-    elif operator == MULTIPLICATION:
-        correct_answer = str(operator_module.mul(operand1, operand2))
-    else:
-        raise ValueError('Unknown operator: {operator}'.format(
-            operator=operator,
-        ))
+    question = f'{operand1} {operator} {operand2}'
+    correct_answer = str(operators[operator](operand1, operand2))
 
     return question, correct_answer

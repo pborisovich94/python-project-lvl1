@@ -3,9 +3,6 @@ import random
 
 GAME_RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
-# Range of random number
-MIN, MAX = 1, 100
-
 
 def _is_prime(number):
     """Return True if number is prime else False.
@@ -32,7 +29,7 @@ def get_question_and_correct_answer():
         str,
         str
     """
-    number = random.randint(MIN, MAX)
+    number = random.randint(1, 100)
     correct_answer = 'yes' if _is_prime(number=number) else 'no'
     question = '{number}'.format(number=number)
     return question, correct_answer
