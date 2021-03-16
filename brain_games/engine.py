@@ -23,7 +23,7 @@ def play(game):
             print(
                 f"'{user_answer}' is wrong answer ;(. "
                 + f"Correct answer was '{correct_answer}'.\n"
-                + f"Let's try again, {user_name}!"
+                + f"Let's try again, {user_name}!",
             )
             return
         print('Correct!')
