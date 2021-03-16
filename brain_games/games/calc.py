@@ -14,9 +14,6 @@ def get_question_and_correct_answer():
     Returns:
         str,
         str
-
-    Raises:
-        ValueError: unknown incoming operator
     """
     operand1 = random.randint(1, 100)
     operand2 = random.randint(1, 100)
