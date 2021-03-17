@@ -4,9 +4,6 @@ import random
 
 GAME_RULE = 'What is the result of the expression?'
 
-# Operators
-ADDITION, SUBTRACTION, MULTIPLICATION = '+', '-', '*'
-
 
 def get_question_and_correct_answer():
     """Generate question and correct_answers.
