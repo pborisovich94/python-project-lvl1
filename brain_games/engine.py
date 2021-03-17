@@ -13,8 +13,8 @@ def play(game):
     print(f'Hello, {user_name}!')
     print(game.GAME_RULE)
 
-    game_rounds_to_win = 3
-    for _ in range(0, game_rounds_to_win):
+    game_rounds_count = 3
+    for _ in range(0, game_rounds_count):
         question, correct_answer = game.get_question_and_correct_answer()
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
